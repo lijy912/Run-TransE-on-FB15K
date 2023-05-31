@@ -43,7 +43,7 @@ python ../OpenKE/util/preprocess.py -dataset FB15K -output_path ./
 ```
 <p>&nbsp&nbsp&nbsp&nbspThis command generates entity and relationship vector files (entity2vec.bin, relation2vec.bin) and triad files (train2id.txt, valid2id.txt, test2id.txt) of training, verification, and test data sets in the FB15K directory.</p>
 <h3>5. Training model</h3>
-<li>Use the following command to train the TransE model on the FB15K data set:</list?
+<li>Use the following command to train the TransE model on the FB15K data set:</li>
 
 ```
 python ../OpenKE/run.py --do_train --cuda -adv -model TransE -dataset FB15K -batch_size 256 -hidden_size 50 -gamma 19.9 -lr 0.01 -max_steps 60000 -train_times 100
