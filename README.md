@@ -6,7 +6,6 @@ In windows environment, Run the TransE model on the FB15K data set.
 Python3
 
 <h2>Related Knowledge</h2>
-<p>Running TransE models on FB15K data sets on Windows requires downloading data sets, installing Python and dependencies, downloading OpenKE source code, preprocessing data sets, training models, and testing models</p>
 <h3>1. TransE</h3>
 <p>TransE is a knowledge representation learning method based on vector space, and its principle is based on "migration vector". In this method, entities and relations are mapped to low-dimensional continuous vector Spaces respectively, and then, by adjusting the vectors in the vector space, the representation of each triplet in the vector space is most consistent with its semantic relevance. Specifically, for a triplet (h,r,t), where h represents the head entity,r represents the relation, and t represents the tail entity, TransE computes the vector by the following formula:</p>
 
@@ -20,6 +19,7 @@ h + r ≈ t
 <p>FB15K is a commonly used knowledge graph dataset provided by Facebook AI Research (FAIR) to evaluate the performance of knowledge representation learning and knowledge base completion. The dataset contains 15,000 entities, 1,345 relationships, and 592,213 triples, where both entities and relationships are uniquely identified by ids.</p>
 
 <h2>Procedure</h2>
+<p>Running TransE models on FB15K data sets on Windows requires downloading data sets, installing Python and dependencies, downloading OpenKE source code, preprocessing data sets, training models, and testing models</p>
 <h3>1. Download data set</h3>
 <li>Download FB15K data set: https://everest.hds.utc.fr/doku.php?id=en:transe </li>
 <p>&nbsp&nbsp&nbsp&nbspThe data set includes three files: entity file (entity2id.txt), relationship file (relation2id.txt), and triad file (train.txt, valid.txt, test.txt).</p>
