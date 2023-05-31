@@ -6,6 +6,7 @@ In windows environment, Run the TransE model on the FB15K data set.
 Python3
 
 <h2>Related Knowledge</h2>
+<p>Running TransE models on FB15K data sets on Windows requires downloading data sets, installing Python and dependencies, downloading OpenKE source code, preprocessing data sets, training models, and testing models</p>
 <h3>1. TransE</h3>
 <p>TransE is a knowledge representation learning method based on vector space, and its principle is based on "migration vector". In this method, entities and relations are mapped to low-dimensional continuous vector Spaces respectively, and then, by adjusting the vectors in the vector space, the representation of each triplet in the vector space is most consistent with its semantic relevance. Specifically, for a triplet (h,r,t), where h represents the head entity,r represents the relation, and t represents the tail entity, TransE computes the vector by the following formula:</p>
 
