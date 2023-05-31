@@ -49,7 +49,7 @@ python ../OpenKE/util/preprocess.py -dataset FB15K -output_path ./
 python ../OpenKE/run.py --do_train --cuda -adv -model TransE -dataset FB15K -batch_size 256 -hidden_size 50 -gamma 19.9 -lr 0.01 -max_steps 60000 -train_times 100
 ```
 <p>&nbsp&nbsp&nbsp&nbspThe command is trained using the TransE model, the FB15K dataset, and the specified hyperparameters. Hyperparameters can be adjusted as needed, such as hidden vector dimension (hidden_size), learning rate (lr) and negative sample ratio (neg_ratio).</p>
-<h3>6. Training model</h3>
+<h3>6. Test model</h3>
 <li>Test the performance of the trained TransE model on the test set using the following command:</li>
 
 ```
