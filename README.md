@@ -1,4 +1,4 @@
-# Run-TransE-on-FB15K
+# Run-TransE/H/R/D-on-FB15K
 <h2>Summary</h2>
 In windows environment, Run the TransE & TransH & TransR & TransD model on the FB15K data set.
 
@@ -23,7 +23,6 @@ h + r ≈ t
 <h2>Quick start</h2>
 
 <li>Download OpenKE source code</li>
-<p>Using the Git command to download OpenKE (https://github.com/thunlp/OpenKE), the source code:</p>
 
 ```
 git clone https://github.com/thunlp/OpenKE.git
