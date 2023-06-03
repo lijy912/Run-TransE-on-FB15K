@@ -1,6 +1,6 @@
-# Run-TransE/H/R/D-on-FB15K
+# Run-TransE-on-FB15K
 <h2>Summary</h2>
-In windows environment, Run the TransE & TransH & TransR & TransD model on the FB15K data set.
+In windows environment, Run the TransE model on the FB15K data set.
 
 <h2>Preparation</h2>
 <li>Python3</li>
@@ -20,6 +20,29 @@ h + r ≈ t
 <h3>2. FB15K</h3>
 <p>FB15K is a commonly used knowledge graph dataset provided by Facebook AI Research (FAIR) to evaluate the performance of knowledge representation learning and knowledge base completion. The dataset contains 15,000 entities, 1,345 relationships, and 592,213 triples, where both entities and relationships are uniquely identified by ids.</p> -->
 
+<h2>Check the environment</h2>
+
+<li>Import pytorch</li>
+
+```
+python
+import torch
+```
+<li>Check out the version of torch</li>
+
+```
+print(torch.__version__)
+```
+<li>Check whether torch is compatible with cuda</li>
+
+```
+troch.cuda.is_avaiable
+```
+<li>If True is returned, proceed</li>
+
+```
+exit()
+```
 <h2>Quick start</h2>
 
 <li>Download OpenKE source code</li>
@@ -36,12 +59,17 @@ cd openke
 <li>Compiling C++ files</li>
 
 ```
-g++ ./base/Base.cpp -fPIC -shared -o ./release/Base.so -pthread -O3 -march=native
+bash make.sh
 ```
 <li>Go to superior directory</li>
 
 ```
 cd ../
+```
+<li>Create the directory "checkpoint"</li>
+
+```
+mkdir checkpoint
 ```
 <h3>Training</h3>
 <li> Run the TransE model on the FB15K data set</li>
@@ -50,7 +78,7 @@ cd ../
 cp examples/train_transe_FB15K237.py ./
 python train_transe_FB15K237.py
 ```
-<li>Run the TransH model on the FB15K data set</li>
+<!-- <li>Run the TransH model on the FB15K data set</li>
 
 ```
 cp examples/train_transh_FB15K237.py ./
@@ -67,4 +95,4 @@ python train_transr_FB15K237.py
 ```
 cp examples/train_transd_FB15K237.py ./
 python train_transd_FB15K237.py
-```
+``` -->
