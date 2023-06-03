@@ -21,7 +21,6 @@ import torch
 print(torch.__version__)
 ```
 <p>The version number returned here if "+cpu" is present there is an error, it should be "+cu"</p>
-<p>What I'm returning here is "2.0.0+cu118"</p>
 <li>Check whether torch is compatible with cuda</li>
 
 ```
@@ -32,6 +31,8 @@ troch.cuda.is_available()
 ```
 exit()
 ```
+
+![image](https://github.com/Cheng-Xiao-Ai/Run-TransE-on-FB15K/blob/main/img/b4e96cafefae589fa55bb87b77a5204.png)
 <h2>Quick start</h2>
 
 <li>Download OpenKE source code</li>
@@ -61,10 +62,19 @@ cd ../
 mkdir checkpoint
 ```
 <h3>Training</h3>
-<li> Run the TransE model on the FB15K data set</li>
+Run the TransE model on the FB15K data set
 
 ```
 cp examples/train_transe_FB15K237.py ./
 python train_transe_FB15K237.py
 ```
+<p>Some dependency packages may need to be installed during the process. Install them with pip as prompted, such as:</p>
+
+```
+pip install scikit-learn
+```
+
+![image](https://github.com/Cheng-Xiao-Ai/Run-TransE-on-FB15K/blob/main/img/e09a8686bb23459e30fb2ff0042020a.png)
+
+![image](https://github.com/Cheng-Xiao-Ai/Run-TransE-on-FB15K/blob/main/img/1e3de61134107422a870f24efd2047a.png)
 <p>Other models can be trained with similar commands</p>
