@@ -61,20 +61,20 @@ cd ../
 ```
 mkdir checkpoint
 ```
-<h3>Training</h3>
-Run the TransE model on the FB15K data set
+<h2>Training</h2>
+<li>Run the TransE model on the FB15K data set</li>
 
 ```
 cp examples/train_transe_FB15K237.py ./
 python train_transe_FB15K237.py
 ```
-<p>Some dependency packages may need to be installed during the process. Install them with pip as prompted, such as:</p>
+<li>Some dependency packages may need to be installed during the process. Install them with pip as prompted, such as:</li>
 
 ```
 pip install scikit-learn
 ```
-
-![image](https://github.com/Cheng-Xiao-Ai/Run-TransE-on-FB15K/blob/main/img/e09a8686bb23459e30fb2ff0042020a.png)
+<li>Run successfully</li>
 
 ![image](https://github.com/Cheng-Xiao-Ai/Run-TransE-on-FB15K/blob/main/img/1e3de61134107422a870f24efd2047a.png)
-<p>Other models can be trained with similar commands</p>
+<p></p>
+<li>Other models can be trained with similar commands</li>
