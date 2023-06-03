@@ -114,6 +114,9 @@ pip install scikit-learn
 <li>Run successfully</li>
 
 ![image](https://github.com/Cheng-Xiao-Ai/Run-TransE-on-FB15K/blob/main/img/1e3de61134107422a870f24efd2047a.png)
-<p></p>
+<li>Conclusion</li>
+<p>The training results showed that the averaged performance of averaged representation of knowledge graph using TransE model was lower on MRR, MR And hit@1-10. Compared with unfiltered data, the filtered data results improve performance, especially in the l(filter) and r(filter) directions. This indicates that the negative sampling strategy can effectively reduce the noise in the training data, improve the accuracy of the model, and alleviate the collision between entities and relations. The hit@10 index of 0.477 indicates that the model has a good accuracy for the top10 recommended entities.</p>
+<p>hit@10 is one of the indicators used to measure the accuracy of the model's recommended entities, and it represents the ratio of at least one of the top 10 entities in the recommended list to be correct. Therefore, when the model's hit@10 indicator is 0.477, it means that in each triplet, the model is able to correctly recommend about half of the top 10 entities (i.e. the correct entity and the recommended entity have a close agreement of about 50%). This indicates that the accuracy of the model for the top10 recommended entities is relatively high, but there is still room for further optimization.</p>
+
 <li>Other models can be trained with similar commands</li>
 
