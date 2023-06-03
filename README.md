@@ -14,6 +14,8 @@ that is, the vector of the head entity plus the relation vector in the vector sp
 
 <p>In order to facilitate model calculation, TransE model defines some auxiliary functions and constraints. First, vector embedding of entities and relationships is constrained to the unit L2 norm, i.e., vector length of 1, to avoid model overfitting and further enhance generalization. Second, the inner product or cosine similarity can be used to calculate the similarity between vectors in order to evaluate the semantic correlation between entities and relationships. Finally, the negative sampling strategy is used to train the model, that is, to optimize the model on the negative example sample, resulting in non-existent triples (h, r, t') in the sampling process, where t' represents a false tail entity.</p>
 
+<p>During the training process, the TransE model used MarginLoss loss functions to optimize the model and updated vector embedding by gradient descent algorithm. MarginLoss defines a hyperparameter interval, which can constrain the distance between positive and negative example samples, keeping a certain distance between them, so as to more accurately learn the semantic information of entities and relationships. By optimizing the differences between positive and negative examples, the TransE model can learn semantic information between entities and relationships, and obtain more efficient embedding vectors.</p>
+
 <li>The scoring function is defined as:</li>
 
 ```math
@@ -21,13 +23,13 @@ E(h,r,t) = ||h+r-t||
 ```
 <p>Among them, h, r and t represent the triples (head entities, relationships, tail entities) head entities, relationships, and the tail of the entity, ||·|| said vector Euclidean norm.</p>
 
-<p>During the training process, the TransE model used MarginLoss loss functions to optimize the model and updated vector embedding by gradient descent algorithm. MarginLoss defines a hyperparameter interval, which can constrain the distance between positive and negative example samples, keeping a certain distance between them, so as to more accurately learn the semantic information of entities and relationships. By optimizing the differences between positive and negative examples, the TransE model can learn semantic information between entities and relationships, and obtain more efficient embedding vectors.</p>
-
-<li>Based on this scoring function, the TransE algorithm constructs a boundary-based loss function to minimize the distance between positive and negative samples in the embedded space, while keeping the difference between positive and negative samples no more than a boundary value γ>0：</li>
+<li>The boundary-based loss function is defined as：</li>
 
 ```math
 L = ∑ ⟨h,r,t⟩∈T ∑ ⟨h',r',t'⟩∈T^- max([γ+E(h,r,t)-E(h',r',t')],0)
 ```
+<p>that to minimize the distance between positive and negative samples in the embedded space, while keeping the difference between positive and negative samples no more than a boundary value γ>0</p>
+
 <p>Where, T represents the positive sample set, T^- represents the negative sample set, max(·,0) represents taking the non-negative part, and γ is the boundary hyperparameter.</p>
 
 <li>Since there is no explicit negative sample triplet in the knowledge graph, the negative sample triplet T^- needs to be constructed as follows:</li>
