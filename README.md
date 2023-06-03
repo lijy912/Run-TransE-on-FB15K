@@ -1,6 +1,22 @@
 # Run-TransE-on-FB15K
-<h2>Summary</h2>
+
+<h1>Summary</h1>
 In windows environment, Run the TransE model on the FB15K data set
+
+<h1>The embedding principle of TransE</h1>
+<p>TransE model is a knowledge graph representation learning model based on vector space. Its embedded principle is to represent each entity and relation as a vector of fixed dimension, and constrain the relation between them to the addition operation in vector space. Specifically, for a triplet (h, r, t), where h, r and t respectively represent the head entity, relation and tail entity, the TransE model considers
+
+  
+```math
+h+r≈t
+```
+that is, the vector of the head entity plus the relation vector in the vector space gets the vector of the tail entity.</p>
+
+<p>In order to facilitate model calculation, TransE model defines some auxiliary functions and constraints. First, vector embedding of entities and relationships is constrained to the unit L2 norm, i.e., vector length of 1, to avoid model overfitting and further enhance generalization. Second, the inner product or cosine similarity can be used to calculate the similarity between vectors in order to evaluate the semantic correlation between entities and relationships. Finally, the negative sampling strategy is used to train the model, that is, to optimize the model on the negative example sample, resulting in non-existent triples (h, r, t') in the sampling process, where t' represents a false tail entity.</p>
+
+<p>During the training process, the TransE model used MarginLoss loss functions to optimize the model and updated vector embedding by gradient descent algorithm. MarginLoss defines a hyperparameter interval, which can constrain the distance between positive and negative example samples, keeping a certain distance between them, so as to more accurately learn the semantic information of entities and relationships. By optimizing the differences between positive and negative examples, the TransE model can learn semantic information between entities and relationships, and obtain more efficient embedding vectors.</p>
+
+<h1>Run-TransE-on-FB15K</h1>
 
 <h2>Preparation</h2>
 <li>Compatible python + cuda + pytorch</li>
@@ -78,3 +94,4 @@ pip install scikit-learn
 ![image](https://github.com/Cheng-Xiao-Ai/Run-TransE-on-FB15K/blob/main/img/1e3de61134107422a870f24efd2047a.png)
 <p></p>
 <li>Other models can be trained with similar commands</li>
+
