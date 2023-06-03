@@ -28,9 +28,9 @@ E(h,r,t) = ||h+r-t||
 ```math
 L = ∑ ⟨h,r,t⟩∈T ∑ ⟨h',r',t'⟩∈T^- max([γ+E(h,r,t)-E(h',r',t')],0)
 ```
-<p>that to minimize the distance between positive and negative samples in the embedded space, while keeping the difference between positive and negative samples no more than a boundary value γ>0</p>
-
 <p>Where, T represents the positive sample set, T^- represents the negative sample set, max(·,0) represents taking the non-negative part, and γ is the boundary hyperparameter.</p>
+
+<p>The boundary based loss function is used to minimize the distance between positive and negative samples in the embedding space, while keeping the difference between positive and negative samples within the boundary value γ>0</p>
 
 <li>Since there is no explicit negative sample triplet in the knowledge graph, the negative sample triplet T^- needs to be constructed as follows:</li>
 
