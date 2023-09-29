@@ -62,7 +62,7 @@ print(torch.__version__)
 - Check whether torch is compatible with cuda
 
 ```
-troch.cuda.is_available()
+torch.cuda.is_available()
 ```
 > If True is returned, proceed
 
